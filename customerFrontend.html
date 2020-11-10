@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="webStoreStyle.css">
+        <script src="formChecker.js"></script>
+    </head>
+    <h1>
+        Web Store
+    </h1>
+    <body>
+        <form action="customerBackend.php" method="post" onsubmit="return validateForm(event)">
+            Username: <input name="username" type="text" placeholder="something@something.something"><br>
+            Password: <input name="password" type="text" placeholder="a1b2b3"><br>
+            <br><u>Item 1</u><br>
+            Spaghetti: $1.00<br>
+            <img src="img/spaghetti.jpg" alt="spaghetti" height="200px" width="200px" id="spgpic"><br>
+            Quantity: <input type="number" name="Q1" value="0"><br>
+
+            <br>
+
+            <u>Item 2</u><br>
+            Meatballs: $4.00<br>
+            <img src="img/meatballs.jpg" alt="meatballs" height="200px" width="200px" id="mbpic"><br>
+            Quantity: <input type="number" name="Q2" value="0"><br>
+
+            <br>
+
+            <u>Item 3</u><br>
+            Spaghetti and Meatballs: $5.00<br>
+            <img src="img/spaghetti&meatballs.jpg" alt="spaghetti and meatballs" height="200px" width="200px" id="spgmbpic"><br>
+            Quantity: <input type="number" name="Q3" value="0"><br>
+
+            <br>
+
+            Shipping: <br>
+            <input type="radio" id="7Day" name="shipping" value="Free 7 Day">
+            <label for="7Day">Free 7 Day</label><br>
+
+            <input type="radio" id="Overnight" name="shipping" value="$50.00 Over Night">
+            <label for="Overnight">$50.00 Over Night</label><br>
+
+            <input type="radio" id="3Day" name="shipping" value="$5.00 3 Day">
+            <label for="3Day">$5.00 3 Day</label><br>
+
+            <input type="submit" value="Purchase"><br>
+        </form>
+        <button id="reset" onclick="clearPage()">Reset</button><br>
+    </body>
+</html>
